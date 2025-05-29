@@ -11,7 +11,7 @@ export default function BudgetCalculator() {
   const calculateBudget = () => {
     const today = dayjs();
     const endDate = dayjs(deadline);
-    const daysRemaining = endDate.diff(today, "day");
+    const daysRemaining = endDate.diff(today, "day") + 1;
 
     if (daysRemaining <= 0) {
       alert("La data di scadenza deve essere nel futuro.");
